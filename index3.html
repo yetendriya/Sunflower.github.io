@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunflower Mood Changer</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer; /* Changes cursor to indicate clickable image */
+    }
+  </style>
+</head>
+<body>
+    <h1>Smile like a .........</h1>
+
+  <div id="container">
+    <!-- Display the sad sunflower initially -->
+    <img id="sunflowerImage" src="sad.jpg" alt="Sad Sunflower" onclick="changeImage()">
+  </div>
+  <h1>SUNFLOWER!!!!</h1>
+
+  <script>
+    // Function to change the image when clicked
+    function changeImage() {
+      const imgElement = document.getElementById('sunflowerImage');
+      if (imgElement.src.includes('sad.jpg')) {
+        imgElement.src = 'smile.jpg'; // Change to smiling image
+      } else {
+        imgElement.src = 'sad.jpg'; // Change back to sad image
+      }
+    }
+  </script>
+
+</body>
+</html>
